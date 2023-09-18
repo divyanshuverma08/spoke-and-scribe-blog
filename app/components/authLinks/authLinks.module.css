@@ -1,3 +1,7 @@
+.container{
+    z-index: 1000;
+}
+
 .link{
     cursor: pointer;
 }
@@ -40,5 +44,9 @@
 
     .link{
         display: none;
+    }
+
+    .responsiveMenu .link{
+        display: block;
     }
 }

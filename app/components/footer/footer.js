@@ -8,7 +8,7 @@ export default function Footer() {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="" width={50} height={50} style={{borderRadius: "50%"}} />
+          <Image priority={false} src="/logo.png" alt="" width={50} height={50} style={{borderRadius: "50%"}} />
           <h1 className={styles.logoText}>Spoke&Scribe</h1>
         </div>
         <p className={styles.desc}>

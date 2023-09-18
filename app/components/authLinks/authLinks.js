@@ -10,7 +10,7 @@ export default function AuthLinks() {
 
   const {status} = useSession();
   return (
-    <>
+    <div className={styles.container}>
       {status === "unauthenticated" ? (
         <Link href="/login" className={styles.link}>
           Login
@@ -32,27 +32,29 @@ export default function AuthLinks() {
       </div>
       {open && (
         <div className={styles.responsiveMenu}>
-          <Link href="/">
+          <Link onClick={()=>setOpen(!open)} href="/">
             Homepage
           </Link>
-          <Link href="/">
+          <Link onClick={()=>setOpen(!open)} href="/">
             Cotact
           </Link>
-          <Link href="/">
+          <Link onClick={()=>setOpen(!open)} href="/">
             About
           </Link>
           {status === "unauthenticated" ? (
-            <Link href="/login" className={styles.link}>
+            <Link onClick={()=>setOpen(!open)} href="/login" className={styles.link}>
               Login
             </Link>
           ) : (
             <>
-              <Link href="/write">Write</Link>
-              <span className={styles.link}>Logout</span>
+              <Link onClick={()=>setOpen(!open)} href="/write">Write</Link>
+              <span className={styles.link} onClick={signOut}>
+              Logout
+              </span>
             </>
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }
