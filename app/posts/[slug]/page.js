@@ -39,7 +39,7 @@ export default async function SinglePage({ params }) {
           </div>
         </div>
         {data?.img && <div className={styles.imageContainer}>
-          <Image src={data.img} alt="" fill className={styles.image} />
+          <Image priority={true} src={data.img} alt="" fill className={styles.image} />
         </div>}
       </div>
       <div className={styles.content}>

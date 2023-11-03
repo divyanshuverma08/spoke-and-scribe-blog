@@ -65,7 +65,7 @@ export default function Comments({ postSlug }) {
         {isLoading
           ? "loading"
           : data.map((item) => (
-              <div key={item._id} className={styles.comment}>
+              <div key={item.id} className={styles.comment}>
                 <div className={styles.user}>
                   {item.user.image && (
                     <Image

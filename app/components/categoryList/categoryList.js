@@ -24,7 +24,7 @@ export default async function CategoryList() {
       <div className={styles.categories}>
         {data?.map((item) => (
           <Link
-            key={item._id}
+            key={item.id}
             href={`/blog?cat=${item.slug}`}
             className={`${styles.category} ${styles[item.slug]}`}
           >
